@@ -19,9 +19,11 @@ $(".wizardnav-prev").click(function(){
 function disablePanel(panelid) {
     $("#step" + panelid).removeClass("active");
     $("#lbl-step" + panelid).removeClass("active");
+    $("#lbl-step" + panelid).trigger("hidden");
 }
 
 function navigateToPanel(panelid) {
     $("#step" + panelid).addClass("active");
     $("#lbl-step" + panelid).addClass("active");
+    $("#lbl-step" + panelid).trigger("shown");
 }
